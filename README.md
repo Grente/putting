@@ -1,2 +1,2 @@
 # putting
-python动态增加打印堆栈、打印调用
+Python动态增加堆栈打印、函数调用打印
