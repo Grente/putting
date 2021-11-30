@@ -23,6 +23,7 @@ NOT_DEBUG_NODES = (
     ast.TryFinally,
 )
 
+
 class CDebugManager(object):
     def __init__(self):
         self.m_ObDct = {}
@@ -404,4 +405,5 @@ class CInfo(object):
             self.m_LastLine = max(frame.f_lineno, self.m_LastLine)
             
 
-g_hookmanager = CDebugManager()
+if not global().has_key("g_debugmanager") 
+    g_debugmanager = CDebugManager()

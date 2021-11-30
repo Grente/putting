@@ -118,7 +118,3 @@ def getobj_bystr(obstr):
     return module, clsob, retob
 
 
-
-
-
-
