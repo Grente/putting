@@ -2,6 +2,7 @@
 
 import putter
 import func
+import define
 
 
 def open(ob_str):
@@ -23,3 +24,8 @@ def close(obstr):
 
 
 CInfo = putter.CInfo
+
+def set_out_trace(trace_fun):
+    define.TRACE = trace_fun
+    reload(func)
+    reload(putter)
