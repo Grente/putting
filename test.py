@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
+import putting
+
 
 def test_func(arg):
     while arg > 0:
         arg -= 1
     b = arg + 2
+    print arg
     return b
 
 

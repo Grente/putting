@@ -25,3 +25,14 @@ def set_out_trace(trace_fun):
     reload(func)
     reload(putter)
 
+
+def put_trace(obj):
+    if isinstance(obj, func.classtype):
+        putter.g_debugmanager.add_info(obj, obj)
+        return obj
+    else:
+        if getattr(obj, "putter", None):
+            return obj
+        else:  
+            putter.g_debugmanager.add_info(obj, None)
+            return obj

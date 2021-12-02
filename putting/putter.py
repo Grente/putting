@@ -84,6 +84,7 @@ class CDebugModule(object):
     def add_info(self, obj, clsob=None, depth=0):
         mod_tree = ast.parse(inspect.getsource(self.m_mod), self.m_file)
         tree_info = {}
+        
         for _obj in mod_tree.body:
             if isinstance(_obj, (ast.FunctionDef, ast.ClassDef)):
                 tree_info[_obj.name] = _obj
@@ -106,6 +107,7 @@ class CDebugModule(object):
             if not _tree:
                 TRACE("[ERROR]:%s has not found %s tree" % (self.m_name, self._getobname(ob)))
                 continue
+                
             if isinstance(ob, classtype):
                 treelst = [tree_ob for tree_ob in _tree.body if isinstance(tree_ob, ast.FunctionDef)]
             else:
@@ -113,15 +115,15 @@ class CDebugModule(object):
             for _tree_ob in treelst:
                 CDebugWrap(_tree_ob).visit(_tree_ob)
                 ast.fix_missing_locations(_tree_ob)
-
+            
             addoblst.append(ob)
-
         if not addoblst:
             return
+            
         env = {}
         code = compile(mod_tree, self.m_file, 'exec')
         exec(code, env)
-
+        
         for ob in addoblst:
             name = self._getobname(ob)
             if isinstance(ob, functypes) and clsob:
@@ -403,7 +405,8 @@ class CInfo(object):
         self._exp_info(frame)
         if not self._end_info(frame):
             self.m_LastLine = max(frame.f_lineno, self.m_LastLine)
-            
 
-if not global().has_key("g_debugmanager") 
+
+
+if not globals().has_key("g_debugmanager"):
     g_debugmanager = CDebugManager()

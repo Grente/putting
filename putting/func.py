@@ -31,7 +31,7 @@ def _update_function(oldfunc, newfunc):
         attr_name = "__code__"
     else:
         attr_name = 'func_code'
-
+    
     old_code = getattr(oldfunc, attr_name)
     new_code = getattr(newfunc, attr_name)
     if not code_objects_equal(old_code, new_code):
