@@ -1,7 +1,7 @@
 # putting
-Python动态增加堆栈打印、函数调用打印，类似PySnooper打印
-解决PySnooper需要关闭进程通过装饰器增加打印的繁琐
-putting对 from module import * 导入的函数同样会生效
+Python动态增加堆栈打印、函数调用打印，类似PySnooper打印 
+解决PySnooper需要关闭进程通过装饰器增加打印的繁琐 
+putting对 from module import * 导入的函数同样会生效 
 
 
 
