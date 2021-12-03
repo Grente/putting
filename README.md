@@ -20,9 +20,10 @@ def test_func(arg):
 
 ```python
 putting.open("test.test_func")
+test.test_func(1)
 ```
 
-效果：
+执行效果：
 
 ```python
 open debug: test.test_func
