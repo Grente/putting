@@ -1,8 +1,8 @@
 # putting
-Python动态增加堆栈打印、函数调用打印，对PySnooper的升级版  
+Python动态增加堆栈打印、函数调用打印，对[PySnooper](https://github.com/cool-RR/PySnooper)的升级版  
 1、可以动态增加\删除打印，即使是非调试环境也可以操作  
-2、putting对 from module import * 导入的函数同样会生效  
-3、支持对模块\类 所有函数\方法增加打印
+2、putting对 from module import * 导入的函数调用同样会生效  
+3、支持输入模块\类，一键对所有函数\方法增加打印  
 
 
 
