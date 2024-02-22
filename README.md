@@ -49,3 +49,9 @@ def test_func(arg(4)):
 
 ==================(END:Info(ID:46903704))=================
 ```
+
+关闭：
+```python
+putting.close("test.test_func")
+```
+
